@@ -14,10 +14,11 @@ ENV LANG en_EN.UTF-8
 ENV LANGUAGE en_EN:en
 
 ADD ./src/* ./
+RUN sed -i -e 's/\r$//' *sh
 
 RUN npm install
 
-RUN chmod +x /src/flask_start.sh
+RUN chmod +x flask_start.sh
 CMD ["/bin/bash"]
 
 
