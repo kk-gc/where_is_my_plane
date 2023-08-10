@@ -17,7 +17,7 @@ ADD ./src/* ./
 
 RUN npm install
 
-#CMD ["/bin/bash"]
+CMD ["/bin/bash"]
 
-RUN chmod +x ./src/flask_start.sh
-CMD ["./flask_start.sh"]
+# RUN chmod +x ./src/flask_start.sh
+# CMD ["./flask_start.sh"]
