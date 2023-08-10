@@ -1,6 +1,6 @@
 FROM node:18
 
-WORKDIR /_project
+WORKDIR /src
 
 RUN apt-get update -y -qq
 RUN apt-get install -y -qq libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev libasound2
@@ -13,7 +13,7 @@ RUN sed -i '/en_EN.UTF-8/s/^# //g' /etc/locale.gen && locale-gen
 ENV LANG en_EN.UTF-8
 ENV LANGUAGE en_EN:en
 
-ADD ./_project/* ./
+ADD ./src/* ./
 
 RUN npm install
 
