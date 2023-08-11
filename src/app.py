@@ -21,6 +21,7 @@ def index():
     print(f'api_response: {api_response}')
 
     if api_response.startswith('\\'):
+        api_response = api_response.replace('|', '\n\t')
         return render_template('/index.html', api_response=api_response)
 
     return render_template('/index.html')
