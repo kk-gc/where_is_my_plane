@@ -21,8 +21,12 @@ def index():
     print(f'api_response: {api_response}')
 
     if api_response.startswith('\\'):
-        api_response = api_response.replace('|', '\n\t')
-        return render_template('/index.html', api_response=api_response)
+        api_response_1, api_response_2, api_response_3 = api_response.split('|')
+        return render_template('/index.html',
+                               api_response_1=api_response_1,
+                               api_response_2=api_response_2,
+                               api_response_3=api_response_3,
+                               )
 
     return render_template('/index.html')
 
