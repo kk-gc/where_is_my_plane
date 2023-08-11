@@ -15,7 +15,6 @@ ENV LANGUAGE en_EN:en
 
 ADD ./src/* ./
 RUN sed -i -e 's/\r$//' *sh
-RUN sed -i -e 's/\r$//' *css
 
 RUN npm install
 
