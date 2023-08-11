@@ -26,6 +26,16 @@
           color: #aaabb8;
           width: 10%;
         }
+        #line1 {
+          margin-left: 20px;
+        }
+        #line2 {
+          margin-left: 100px;
+        }
+        #line3 {
+          margin-left: 180px;
+        }
+
     </style>
 </head>
 <body>
@@ -38,9 +48,9 @@
 
     </form>
 
-    <h4>{{ api_response_1 }}</h4>
-    <h4>    {{ api_response_2 }}</h4>
-    <h4>        {{ api_response_3 }}</h4>
+    <h4 id="line1">{{ api_response_1 }}</h4>
+    <h4 id="line2">{{ api_response_2 }}</h4>
+    <h4 id="line3">{{ api_response_3 }}</h4>
 
 </body>
 </html>
