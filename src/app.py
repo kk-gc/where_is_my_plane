@@ -3,7 +3,7 @@ import subprocess
 import os
 
 
-app = Flask(__name__, template_folder='.', static_folder='static')
+app = Flask(__name__, template_folder='.')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
