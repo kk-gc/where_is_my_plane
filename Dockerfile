@@ -20,5 +20,5 @@ RUN sed -i -e 's/\r$//' *sh
 RUN npm install
 
 RUN chmod +x flask_start.sh
-CMD ["/bin/bash"]
-#CMD ["./flask_start.sh"]
+#CMD ["/bin/bash"]
+CMD ["./flask_start.sh"]
